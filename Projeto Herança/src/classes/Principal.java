@@ -5,7 +5,10 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println("Teste");
+		Pessoa pessoa = new Pessoa();
+		
+		pessoa.setNome("Leandro Marques");
+		System.out.println("Nome Pessoa: " + pessoa.getNome());
 
 	}
 
