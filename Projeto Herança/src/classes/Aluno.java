@@ -31,7 +31,22 @@ public class Aluno extends Pessoa {
 	public void setDisicplina(String disicplina) {
 		this.disicplina = disicplina;
 	}
+	@Override
+	public String toString() {
+		return "Aluno [dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatricula="
+				+ serieMatricula + ", disicplina=" + disicplina + ", nome=" + nome + ", idade=" + idade
+				+ ", dataNascimento=" + dataNascimento + ", numeroCpf=" + numeroCpf + ", nomePai=" + nomePai
+				+ ", nomeMae=" + nomeMae + "]";
+	}
 	
+	@Override
+	public boolean pessoaMaiorIdade() {
+		// TODO Auto-generated method stub
+		return super.pessoaMaiorIdade();
+	}
 	
+	public String msgMaiorIdade() {
+		return this.pessoaMaiorIdade() ? "Oba aluno é maior de idade" : "vish vc é menor de idade";
+	}
 
 }

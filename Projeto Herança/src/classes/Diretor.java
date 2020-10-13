@@ -3,7 +3,7 @@ package classes;
 public class Diretor extends Pessoa {
 
 	private String registroEducacao;
-	private String tempoDirecao;
+	private int tempoDirecao;
 	private String titulacao;
 	
 	public String getRegistroEducacao() {
@@ -12,10 +12,11 @@ public class Diretor extends Pessoa {
 	public void setRegistroEducacao(String registroEducacao) {
 		this.registroEducacao = registroEducacao;
 	}
-	public String getTempoDirecao() {
+	
+	public int getTempoDirecao() {
 		return tempoDirecao;
 	}
-	public void setTempoDirecao(String tempoDirecao) {
+	public void setTempoDirecao(int tempoDirecao) {
 		this.tempoDirecao = tempoDirecao;
 	}
 	public String getTitulacao() {
@@ -23,6 +24,12 @@ public class Diretor extends Pessoa {
 	}
 	public void setTitulacao(String titulacao) {
 		this.titulacao = titulacao;
+	}
+	@Override
+	public String toString() {
+		return "Diretor [registroEducacao=" + registroEducacao + ", tempoDirecao=" + tempoDirecao + ", titulacao="
+				+ titulacao + ", nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento
+				+ ", numeroCpf=" + numeroCpf + ", nomePai=" + nomePai + ", nomeMae=" + nomeMae + "]";
 	}
 	
 	

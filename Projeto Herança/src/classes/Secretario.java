@@ -3,7 +3,7 @@ package classes;
 public class Secretario extends Pessoa {
 	
 	private String reistro;
-	private String tipoCargo;
+	private String nivelCargo;
 	private String experiencia;
 	
 	public String getReistro() {
@@ -12,17 +12,24 @@ public class Secretario extends Pessoa {
 	public void setReistro(String reistro) {
 		this.reistro = reistro;
 	}
-	public String getTipoCargo() {
-		return tipoCargo;
+	
+	public String getNivelCargo() {
+		return nivelCargo;
 	}
-	public void setTipoCargo(String tipoCargo) {
-		this.tipoCargo = tipoCargo;
+	public void setNivelCargo(String nivelCargo) {
+		this.nivelCargo = nivelCargo;
 	}
 	public String getExperiencia() {
 		return experiencia;
 	}
 	public void setExperiencia(String experiencia) {
 		this.experiencia = experiencia;
+	}
+	@Override
+	public String toString() {
+		return "Secretario [reistro=" + reistro + ", nivelCargo=" + nivelCargo + ", experiencia=" + experiencia
+				+ ", nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", numeroCpf="
+				+ numeroCpf + ", nomePai=" + nomePai + ", nomeMae=" + nomeMae + "]";
 	}
 	
 	

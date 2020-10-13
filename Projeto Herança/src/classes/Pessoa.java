@@ -3,7 +3,7 @@ package classes;
 public class Pessoa {
 	
 	protected String nome;
-	protected String idade;
+	protected int idade;
 	protected String dataNascimento;
 	protected String numeroCpf;
 	protected String nomePai;
@@ -14,10 +14,11 @@ public class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getIdade() {
+	
+	public int getIdade() {
 		return idade;
 	}
-	public void setIdade(String idade) {
+	public void setIdade(int idade) {
 		this.idade = idade;
 	}
 	public String getDataNascimento() {
@@ -45,7 +46,9 @@ public class Pessoa {
 		this.nomeMae = nomeMae;
 	}
 	
-	
+	public boolean pessoaMaiorIdade() {
+		return idade >= 18;
+	}
 	
 
 }
