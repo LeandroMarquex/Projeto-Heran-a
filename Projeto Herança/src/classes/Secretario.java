@@ -31,6 +31,11 @@ public class Secretario extends Pessoa {
 				+ ", nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", numeroCpf="
 				+ numeroCpf + ", nomePai=" + nomePai + ", nomeMae=" + nomeMae + "]";
 	}
+	@Override
+	public double salario() {
+		// TODO Auto-generated method stub
+		return 1500.80 * 0.5;
+	}
 	
 	
 

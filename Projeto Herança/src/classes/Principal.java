@@ -27,6 +27,20 @@ public class Principal {
 		System.out.println(diretor.pessoaMaiorIdade());
 		System.out.println(secretario.pessoaMaiorIdade());
 
+		System.out.println(" Salario Aluno: " + aluno.salario());
+		System.out.println(" Salario Diretor: " + diretor.salario());
+		System.out.println(" Salario Secretario: " + secretario.salario());
+		
+		teste(aluno);
+		teste(secretario);
+		teste(diretor);
+	}
+	
+	
+	
+	public static void teste(Pessoa pessoa) {
+		System.out.println("Essa pessoa é demais = "
+				+ pessoa.getNome() + " e o salario é de = " + pessoa.salario());
 	}
 
 }
