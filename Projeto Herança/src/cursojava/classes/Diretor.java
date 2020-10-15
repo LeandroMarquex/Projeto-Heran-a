@@ -1,4 +1,4 @@
-package classes;
+package cursojava.classes;
 
 public class Diretor extends Pessoa {
 

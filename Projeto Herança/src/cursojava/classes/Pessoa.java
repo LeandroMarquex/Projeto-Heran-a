@@ -1,4 +1,4 @@
-package classes;
+package cursojava.classes;
 
 public abstract class Pessoa {
 	

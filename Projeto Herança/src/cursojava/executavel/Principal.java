@@ -1,10 +1,22 @@
-package classes;
+package cursojava.executavel;
+
+import javax.swing.JOptionPane;
+
+import cursojava.classes.Aluno;
+import cursojava.classes.Diretor;
+import cursojava.classes.Pessoa;
+import cursojava.classes.Secretario;
 
 public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		String login = JOptionPane.showInputDialog("Informe o login");
+		String senha = JOptionPane.showInputDialog("Informe o senha");
+		
+
+						
 		Aluno aluno = new Aluno();
 		aluno.setNome("Leandro Marques");
 		aluno.setIdade(26);
@@ -14,6 +26,15 @@ public class Principal {
 		diretor.setIdade(50);
 				
 		Secretario secretario = new Secretario();
+		
+		secretario.setLogin(login);
+		secretario.setSenha(senha);
+		
+		if (secretario.autenticar()) {
+			JOptionPane.showConfirmDialog(null, "Acesso efetuado com SUCESSO");
+		}else {
+			JOptionPane.showConfirmDialog(null, "LOGIN ou USUARIO inválidos");
+		}
 		secretario.setExperiencia("ti");
 		secretario.setIdade(30);
 		
