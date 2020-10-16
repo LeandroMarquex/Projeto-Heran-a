@@ -6,6 +6,7 @@ import cursojava.classes.Aluno;
 import cursojava.classes.Diretor;
 import cursojava.classes.Pessoa;
 import cursojava.classes.Secretario;
+import cursojava.interfaces.PermitirAcesso;
 
 public class Principal {
 
@@ -26,11 +27,15 @@ public class Principal {
 		diretor.setIdade(50);
 				
 		Secretario secretario = new Secretario();
+//		secretario.setLogin(login);
+	//	secretario.setSenha(senha);
 		
-		secretario.setLogin(login);
-		secretario.setSenha(senha);
+	//	PermitirAcesso secretariopa = new Secretario();
+	
+	
 		
-		if (secretario.autenticar()) {
+	//	if (secretariopa.autenticar(login, senha)) {
+		if (new Secretario().autenticar(login, senha)) {
 			JOptionPane.showConfirmDialog(null, "Acesso efetuado com SUCESSO");
 		}else {
 			JOptionPane.showConfirmDialog(null, "LOGIN ou USUARIO inválidos");
