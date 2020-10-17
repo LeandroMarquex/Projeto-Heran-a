@@ -30,12 +30,13 @@ public class Principal {
 //		secretario.setLogin(login);
 	//	secretario.setSenha(senha);
 		
-	//	PermitirAcesso secretariopa = new Secretario();
+		PermitirAcesso secretariopa = new Secretario(login, senha);
 	
 	
 		
 	//	if (secretariopa.autenticar(login, senha)) {
-		if (new Secretario().autenticar(login, senha)) {
+	// if (new Secretario().autenticar(login, senha)) {
+		if (secretariopa.autenticar(login, senha)) {
 			JOptionPane.showConfirmDialog(null, "Acesso efetuado com SUCESSO");
 		}else {
 			JOptionPane.showConfirmDialog(null, "LOGIN ou USUARIO inválidos");
