@@ -2,6 +2,7 @@ package cursojava.executavel;
 
 import javax.swing.JOptionPane;
 
+import cursojava.classeauxiliar.FuncaoAutenticacao;
 import cursojava.classes.Aluno;
 import cursojava.classes.Diretor;
 import cursojava.classes.Pessoa;
@@ -16,7 +17,7 @@ public class Principal {
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe o senha");
 		
-
+	//	FuncaoAutenticacao autenticacao = new FuncaoAutenticacao();
 						
 		Aluno aluno = new Aluno();
 		aluno.setNome("Leandro Marques");
@@ -30,13 +31,16 @@ public class Principal {
 //		secretario.setLogin(login);
 	//	secretario.setSenha(senha);
 		
-		PermitirAcesso secretariopa = new Secretario(login, senha);
+//		PermitirAcesso secretariopa = new Secretario(login, senha);
 	
 	
 		
 	//	if (secretariopa.autenticar(login, senha)) {
-	// if (new Secretario().autenticar(login, senha)) {
-		if (secretariopa.autenticar(login, senha)) {
+	//  if (new Secretario().autenticar(login, senha)) {
+	//	if (secretariopa.autenticar(login, senha)) {
+	//	if (autenticacao.autenticarCursoJava(secretariopa)) {
+		if (new FuncaoAutenticacao(new Secretario(login, senha)).autenticar() ||
+		 new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()){ // travou autenticação secretario
 			JOptionPane.showConfirmDialog(null, "Acesso efetuado com SUCESSO");
 		}else {
 			JOptionPane.showConfirmDialog(null, "LOGIN ou USUARIO inválidos");
